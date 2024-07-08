@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ruleset
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  name="La Quincaillerie"
+  xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd"
+>
+  <arg value="ps"/>
+  <arg name="colors"/>
+  <arg name="extensions" value="php"/>
+  <arg name="cache" value=".phpcs.cache"/>
+  <config name="minimum_wp_version" value="6.5"/>
+
+  <file>src</file>
+
+  <rule ref="WordPress">
+    <exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"/>
+    <exclude name="Generic.CodeAnalysis.AssignmentInCondition.Found"/>
+    <exclude name="Generic.Commenting.DocComment.MissingShort"/>
+    <exclude name="Squiz.Commenting"/>
+    <exclude name="Squiz.PHP.EmbeddedPhp.ShortOpenEchoNoSemicolon"/>
+    <exclude name="Squiz.PHP.DisallowMultipleAssignments"/>
+    <exclude name="Universal.Arrays.DisallowShortArraySyntax.Found"/>
+    <exclude name="Universal.Operators.DisallowShortTernary.Found"/>
+    <exclude name="Universal.NamingConventions.NoReservedKeywordParameterNames.classFound"/>
+    <exclude name="WordPress.Files.FileName"/>
+    <exclude name="WordPress.Security.EscapeOutput"/>
+  </rule>
+  <rule ref="Generic.Arrays.DisallowLongArraySyntax.Found"/>
+</ruleset>
